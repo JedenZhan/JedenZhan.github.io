@@ -1,0 +1,19 @@
+/*
+ * @Description: 基础css
+ * @Author: zhangzhenyang
+ * @Date: 2020-08-23 10:46:07
+ * @LastEditTime: 2020-08-23 16:56:19
+ * @LastEditors: zhangzhenyang
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #666666;
+  font-size: 12px;
+  overflow-x: scroll;
+  transition: all 1s;
+}

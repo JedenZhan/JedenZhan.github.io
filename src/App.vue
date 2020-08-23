@@ -1,28 +1,58 @@
+<!--
+ * @Description: 主文件
+ * @Author: zhangzhenyang
+ * @Date: 2020-08-23 10:46:07
+ * @LastEditTime: 2020-08-23 18:27:33
+ * @LastEditors: zhangzhenyang
+-->
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Garden :start="start" />
+    <Bulb @startAni="mainStartAni" />
+    <div class="copy-right">
+      <p>Power by JedenZhan</p>
+      <p>we together since 2020/06/27</p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Bulb from "./components/bulb.vue";
+import Garden from "./components/garden.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Garden,
+    Bulb,
+  },
+  data() {
+    return {
+      start: false,
+    };
+  },
+  methods: {
+    mainStartAni(e) {
+      this.start = e;
+    },
+  },
+  watch: {
+    start(e) {
+      console.log(e);
+      if (e) {
+        document.body.style.backgroundColor = "#ffe";
+      }
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.copy-right {
+  position: fixed;
+  bottom: 36px;
+  width: 100%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #ccc;
 }
 </style>

@@ -2,7 +2,7 @@
  * @Description: 密码
  * @Author: zhangzhenyang
  * @Date: 2020-09-04 20:05:42
- * @LastEditTime: 2020-09-04 20:42:35
+ * @LastEditTime: 2020-09-04 20:47:41
  * @LastEditors: zhangzhenyang
 -->
 <template>
@@ -41,7 +41,7 @@ export default {
       right: false,
       wrong: false,
       password: "",
-      rightWord: "2020-8-27",
+      rightWord: "2020-6-27",
     };
   },
   methods: {
@@ -107,6 +107,7 @@ export default {
   border-radius: 15px;
   border: 1px solid #444;
   color: #444;
+  background-color: #ccc;
   cursor: pointer;
 }
 </style>

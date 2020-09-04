@@ -2,7 +2,7 @@
  * @Description: 心形花瓣
  * @Author: zhangzhenyang
  * @Date: 2020-08-23 10:46:07
- * @LastEditTime: 2020-08-23 16:53:33
+ * @LastEditTime: 2020-09-04 19:38:27
  * @LastEditors: zhangzhenyang
 -->
 <template>
@@ -10,17 +10,26 @@
     <canvas id="garden"></canvas>
     <div class="words">
       <div class="messages">
-        <div class="elapseClock" :style="formatedTime && 'opacity: 1'">
+        <div
+          class="elapseClock"
+          :style="formatedTime && 'opacity: 1'"
+        >
           <span class="digit">{{ formatedTime.day }}</span>Days
           <span class="digit">{{ formatedTime.hour }}</span>Hours
           <span class="digit">{{ formatedTime.min }}</span>Minutes
           <span class="digit">{{ formatedTime.second }}</span>Seconds
         </div>
-        <div class="loveu" :style="showLoveu && 'opacity: 1'">
+        <div
+          class="loveu"
+          :style="showLoveu && 'opacity: 1'"
+        >
           已经在一起
         </div>
-        <div class="signature" :style="showLoveu && 'opacity: 1'">
-          - 镇🐑
+        <div
+          class="signature"
+          :style="showLoveu && 'opacity: 1'"
+        >
+          - JedenZhan
         </div>
       </div>
     </div>

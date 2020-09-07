@@ -2,22 +2,21 @@
  * @Description: 主文件
  * @Author: zhangzhenyang
  * @Date: 2020-08-23 10:46:07
- * @LastEditTime: 2020-09-04 20:41:35
+ * @LastEditTime: 2020-09-07 20:57:57
  * @LastEditors: zhangzhenyang
 -->
 <template>
   <div>
     <Password @rightPerson="welcome" />
-
     <div
       class="main"
       v-if="show"
     >
       <Garden :start="start" />
       <Bulb @startAni="mainStartAni" />
-      <AudioS />
+      <AudioS :audioUrl="audioUrl" />
       <div class="copy-right">
-        <p>Power by JedenZhan for JialiNing</p>
+        <p>Power by JedenZhan for JiaLiNing</p>
         <p>we together since 2020/06/27</p>
       </div>
     </div>
@@ -42,11 +41,13 @@ export default {
     return {
       start: false,
       show: false,
+      audioUrl: "",
     };
   },
   methods: {
     mainStartAni(e) {
       this.start = e;
+      this.audioUrl = "http://mp3.9ku.com/hot/2010/03-10/430257.mp3";
     },
     welcome(e) {
       this.show = e;

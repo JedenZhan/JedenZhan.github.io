@@ -2,14 +2,24 @@
  * @Description: 灯泡
  * @Author: zhangzhenyang
  * @Date: 2020-08-23 16:04:15
- * @LastEditTime: 2020-08-23 16:41:50
+ * @LastEditTime: 2020-09-07 20:57:01
  * @LastEditors: zhangzhenyang
 -->
 <template>
   <div class="container">
-    <div class="electric-line" :style="start && 'background-color: #777'"></div>
-    <div class="light-bulb-close" :style="start && 'background-color: #fff'" @click="startAni">
-      <div class="bulb" :style="start && 'background-color: #888'"></div>
+    <div
+      class="electric-line"
+      :style="start && 'background-color: #777'"
+    ></div>
+    <div
+      class="light-bulb-close"
+      :style="start && 'background-color: #fff'"
+      @click="startAni"
+    >
+      <div
+        class="bulb"
+        :style="start && 'background-color: #888'"
+      ></div>
     </div>
   </div>
 </template>

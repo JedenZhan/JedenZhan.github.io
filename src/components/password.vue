@@ -2,7 +2,7 @@
  * @Description: 密码
  * @Author: zhangzhenyang
  * @Date: 2020-09-04 20:05:42
- * @LastEditTime: 2020-09-04 20:47:41
+ * @LastEditTime: 2020-09-07 21:04:41
  * @LastEditors: zhangzhenyang
 -->
 <template>
@@ -19,6 +19,7 @@
         type="password"
         placeholder="我们于"
         v-model="password"
+        @keyup.enter="confirm"
       >
       <br />
       <button
@@ -28,7 +29,7 @@
       <p
         class="wrong-password"
         v-if="wrong"
-      >你忘了嘛</p>
+      >你忘了嘛💢</p>
     </div>
   </div>
 </template>
@@ -84,7 +85,7 @@ export default {
 
 .wrong-password {
   margin-top: 12px;
-  color: plum;
+  color: #000;
 }
 
 .password {
